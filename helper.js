@@ -4,8 +4,8 @@ const jwt = require("jsonwebtoken")
 const multer = require('multer');
 const path = require('path');
 
-//const serverUrl = 'http://ajory.online:3333/'
-const serverUrl = 'http://192.168.1.6:3000/'
+const serverUrl = 'http://ajory.online:5555/'
+//const serverUrl = 'http://192.168.1.6:3000/'
 
 const encryptText = (text) => {
     return CryptoJS.AES.encrypt(text, process.env.CRYPTO_KEY).toString()
