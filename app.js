@@ -30,6 +30,9 @@ app.get('/', async (req, res, next) => {
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/user', require('./routes/user'));
+app.use('/api/polls', require('./routes/polls'));
+
+app.use('/api/admin', require('./routes/admin'));
 
 app.use((req, res, next) => {
   next(createError.NotFound());
