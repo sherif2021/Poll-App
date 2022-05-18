@@ -35,8 +35,9 @@ router.post('/login', async (req, res, next) => {
 router.post('/poll', verifyTokenAndAdmin, async (req, res, next) => {
 
     try {
-
+        req.body.duration = new Date().getTime() + (req.body.duration * 1000 * 60 * 60)
         const object = new poll_model(req.body)
+        
         const result = await object.save()
 
         res.json(

@@ -53,4 +53,6 @@ router.post('/', verifyToken, upload.array('picture'), async (req, res, next) =>
         next(e)
     }
 })
+
+
 module.exports = router
